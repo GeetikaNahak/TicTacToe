@@ -12,5 +12,24 @@ boxes.forEach((box)=>{
             turno=true
         }
         box.disabled=true;
+        checkforwinner()
     })
 })
+
+const checkforwinner=()=>{
+    for(let pattern of win){
+        let posval1=boxes[pattern[0]].innerHTML;
+        let posval2=boxes[pattern[1]].innerHTML;
+        let posval3=boxes[pattern[2]].innerHTML;
+        if(posval1!=""&&posval2!=""&&posval3!=""&&posval1===posval2&&posval2===posval3){
+            console.log(posval1+"is Winner")
+            
+            disableall();
+        }
+    }
+}
+const disableall=()=>{
+    boxes.forEach(box => {
+        box.disabled=true;
+    });
+}
