@@ -22,8 +22,7 @@ const checkforwinner=()=>{
         let posval2=boxes[pattern[1]].innerHTML;
         let posval3=boxes[pattern[2]].innerHTML;
         if(posval1!=""&&posval2!=""&&posval3!=""&&posval1===posval2&&posval2===posval3){
-            console.log(posval1+"is Winner")
-            
+            console.log(posval1+"is Winner");
             disableall();
         }
     }
