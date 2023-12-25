@@ -22,6 +22,16 @@ body{
     align-items: center;
     gap: 2vmin;
 }
+.title{
+    height: 10vmin;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
 .box{
    height: 18vmin;
    width: 18vmin;
@@ -31,4 +41,24 @@ body{
    font-size: 8vmin;
    color: rgb(20, 13, 56);
    background-color: rgb(238, 238, 238);  
+}
+.winner{
+    display:none;
+    background-color: black;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+}
+.newgame{
+    height: 6vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+    color: #000;
+    background-color: rgb(238, 238, 238); 
+    margin: 4px 4px; 
+    font-weight: 700;
 }

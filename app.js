@@ -24,6 +24,11 @@ const checkforwinner=()=>{
         if(posval1!=""&&posval2!=""&&posval3!=""&&posval1===posval2&&posval2===posval3){
             console.log(posval1+"is Winner");
             disableall();
+            document.getElementById("reset").style.display='none';
+            document.getElementById("winner").innerHTML="YAY! Winner is '"+posval1+"' !!";
+            document.querySelector(".winner").style.display='block';
+            
+            
         }
     }
 }
@@ -32,3 +37,14 @@ const disableall=()=>{
         box.disabled=true;
     });
 }
+const reset=()=>{
+    boxes.forEach(box=>{
+        box.innerText="";
+        box.disabled=false;
+    });
+    newdisplay();
+    document.getElementById("reset").style.display='inline';
+}
+const newdisplay=()=>document.querySelector(".winner").style.display='none';
+// let newgamebtn=document.querySelector(".newgame");
+// newgamebtn.addEventListener("click",reset());
