@@ -12,11 +12,20 @@ boxes.forEach((box)=>{
             turno=true
         }
         box.disabled=true;
+        count++;
         checkforwinner()
+        
     })
 })
-
+let count=0;
 const checkforwinner=()=>{
+    if(count==9){
+        console.log("Tie! Play again!");
+            disableall();
+            document.getElementById("reset").style.display='none';
+            document.getElementById("winner").innerHTML="Tie! Play again!";
+            document.querySelector(".winner").style.display='block';
+    }
     for(let pattern of win){
         let posval1=boxes[pattern[0]].innerHTML;
         let posval2=boxes[pattern[1]].innerHTML;
