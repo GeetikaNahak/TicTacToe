@@ -19,7 +19,7 @@ boxes.forEach((box)=>{
 })
 let count=0;
 const checkforwinner=()=>{
-    if(count==9){
+    if(count===9){
         console.log("Tie! Play again!");
             disableall();
             document.getElementById("reset").style.display='none';
