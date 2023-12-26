@@ -47,6 +47,7 @@ const disableall=()=>{
     });
 }
 const reset=()=>{
+    count=0;
     boxes.forEach(box=>{
         box.innerText="";
         box.disabled=false;
